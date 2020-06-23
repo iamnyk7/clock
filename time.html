@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATCH</title>
+    <style>
+        .container {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        
+        }
+
+        .hour,
+        .minute,
+        .seconds {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(65, 26, 241);
+            margin: 20px 10px;
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: cursive;
+            cursor: none;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>CURRENT TIME IS</h3>
+    <div class="container">
+
+        <div class="hour">
+            <p id="t1"></p>
+            hour
+        </div>
+        <div class="minute">
+            <p id="t2"></p>
+            min
+        </div>
+        <div class="seconds">
+            <p id="t3"></p>
+            sec
+        </div>
+    </div>
+    <script>
+
+        function update() {
+            let date = new Date();
+            document.getElementById('t1').innerHTML = date.getHours();
+            document.getElementById('t2').innerHTML = date.getMinutes();
+            document.getElementById('t3').innerHTML = date.getSeconds();
+        }
+        setInterval(update, 1000);
+    </script>
+
+</body>
+
+</html>
